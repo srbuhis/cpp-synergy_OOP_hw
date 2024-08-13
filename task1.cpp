@@ -48,19 +48,7 @@ class Car {
 int main() {
 
 	Car obj;
-
-	std::string make_value;
-	//std::cin >> make_value;
-
-	std::string model_value;
-	//std::cin >> model_value;
-
-	int year_value;
-	//std::cin >> year_value;
-
-	double mileage_value;
-	//std::cin >> mileage_value;
-
+	
 	obj.setMake("Tesla");
 	obj.setModel("Model S");
 	obj.setYear(2023);
