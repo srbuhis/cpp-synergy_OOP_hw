@@ -61,10 +61,10 @@ int main() {
 	double mileage_value;
 	//std::cin >> mileage_value;
 
-	obj.setMake("CarsMotors");
-	obj.setModel("Tesla");
+	obj.setMake("Tesla");
+	obj.setModel("Model S");
 	obj.setYear(2023);
-	obj.setMileage(200.15);
+	obj.setMileage(2000.15);
 
 	displayInfo(obj);
 }
