@@ -1,1 +1,58 @@
+#include <iostream>
+
+class DynamicArray {
+
+private:
+        int *arr;
+        int size;
+        int cap;
+
+public:
+        void DynamicArrayDefCtor() {
+                size = 0;
+                cap = 0;
+                arr = new int[cap];
+        }
+        
+        void ParameterizedCtor(int val) {
+                size = 0;
+                cap = 10;
+                arr = new int[cap];
+                for(int i = 0; i < cap; ++i) {
+                arr[i] = val;
+                }
+        }
+
+        void Push(int val) {
+                if(size == cap) {
+                cap *= 3;
+                int *temp = new int[cap];
+                for(int i = 0; i < cap; ++i) {
+                temp[i] = arr[i];
+                }
+                delete[] arr;
+                arr = temp;
+                temp = nullptr;
+        }
+        arr[size] = val;
+        ++size;
+        }
+
+        void DynamicArrayDtor() {
+                if(arr != nullptr){
+                delete[] arr;
+                arr = nullptr;
+                }
+        }
+};
+
+int main() {
+
+        DynamicArray ob;
+        ob.DynamicArrayDefCtor();
+        ob.ParameterizedCtor(8);
+        ob.Push(10);
+        ob.DynamicArrayDtor();
+
+}
 
