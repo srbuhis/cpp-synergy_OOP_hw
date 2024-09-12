@@ -4,6 +4,7 @@
 
 class Car: public Vehicle
 {
+public:
 	virtual void move() override;
 
 };
